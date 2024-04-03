@@ -1,0 +1,201 @@
+:root {
+    --black: #000000;
+    --dark-blue1: #020659;
+    --dark-blue2: #020873;
+    --dark-blue3: #030A8C;
+    --light-blue1: #0D8DFB;
+    --light-blue2: #2699FB;
+    --blue: #2104D9;
+    --white: #ffffff;
+    --wine: #590242;
+    --font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+h1 {font-size:1.25em;}
+h2, h3 {font-size: 1em;}
+p, dl, dd {font-size: 1em;}
+footer p {font-size: .75em;}
+
+html {
+    background-color: var(--dark-blue1);
+}
+
+body {
+    width: 375px;
+    margin: 0 auto;
+    background-color: var(--white);
+    font-family: var(--font-family);
+}
+
+header {
+    margin-top: 30px;
+    padding: 40px 30px 10px 30px;
+    background-color: var(--blue);
+    background: linear-gradient(90deg, var(--blue) 0%, var(--dark-blue1) 50%, var(--black) 100%);
+}
+
+header h1 {
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+header p{
+    color: var(--white);
+}
+
+nav {
+    width: 375px;
+    background-color: var(--dark-blue3);
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    text-transform: uppercase;
+}
+
+nav h2 {
+    visibility: hidden;
+    height: 0px;
+}
+
+li:first-child {
+    position: absolute;
+    top: 0;
+    left: 60px;
+    font-size: 32px;
+    text-transform: capitalize;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+li a {
+    display: block;
+    padding: 20px 35px;
+    color: var(--white);
+    text-decoration-line: none;
+}
+
+nav ul {
+    text-align: center;
+}
+
+
+ul {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Hamburger design start */
+label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 20px 30px 20px;
+    position: relative;
+    user-select: none;
+}
+label span {
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 18px;
+}
+label span:before, label span:after {
+    background: #ffffff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+label span:before {
+    top: 5px;
+}
+label span:after {
+    top: -5px;
+}
+input {
+    display: none;
+}
+input:checked ~ ul {
+    max-height: 500px;
+}
+input:checked ~ label span {
+    background: transparent;
+}
+input:checked ~ label span:before {
+    transform: rotate(-45deg);
+}
+input:checked ~ label span:after {
+    transform: rotate(45deg);
+}
+input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+    top: 0;
+}
+/* Hamburger design end */
+
+@media screen and (min-width:834px) {
+    h1 {
+        display: none;
+    }
+
+    body {
+        width: 834px;
+        margin: 0 auto;
+    }
+
+    ul {
+        overflow: visible;
+        position: absolute;
+        top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    label span, input {
+        display: none;
+    }
+}
+
+
+/* Scroll */
+/* #trending ::-webkit-scrollbar {
+
+}
+#trending ::-webkit-scrollbar-track {
+
+}
+#trending ::-webkit-scrollbar-thumb {
+
+}
+#trending ::-webkit-scrollbar-thumb:hover {
+
+}
+#playlists ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
+
+}
+#playlists ::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track  {
+
+}
+#playlists ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
+
+}
+#playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
+
+} */
+
+/* audio */
+/* audio::-webkit-media-controls-mute-button {
+
+}
+audio::-webkit-media-controls-play-button {
+
+}
+audio::-webkit-media-controls-enclosure {
+
+} */
