@@ -180,9 +180,6 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     color: var(--wine);
 }
 
-.trending-items:hover {
-    border-color: white 10px;
-}
 
 dl {
     margin: 0;
@@ -283,7 +280,7 @@ footer p{
 }
 #playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
     background: var(--wine);
-} */
+}
 
 /* audio */
 audio::-webkit-media-controls-mute-button {
